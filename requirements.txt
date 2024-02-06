@@ -31,3 +31,4 @@ numpy
 openpyxl
 packaging
 uvicorn
+pandas
