@@ -40,7 +40,7 @@ def developer_info(dev):
 
 
 def userdata(user_id):
-
+    df_user_data = pd.read_parquet('datos/user_data_price.parquet')
     df_reviews = pd.read_parquet('datos/user_reviews_clean.parquet')
 
     user = None  # Inicializar con un valor por defecto
@@ -142,6 +142,7 @@ def recomendacion_juego(game):
 
 
 def recomendacion_usuario(user):
+    piv_table_norm = pd.read_parquet('datos/piv_table_norm.parquet')
     df_user_simil = pd.read_parquet('datos/df_user_simil.parquet')
     # Se verifica si el usuario está presente en las columnas de piv_table_norm
     if user not in piv_table_norm.columns:
