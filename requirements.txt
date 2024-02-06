@@ -1,5 +1,5 @@
-fastapi==0.68.0
-uvicorn==0.15.0
-pandas==2.0.3
-pyarrow==13.0.0
+fastapi
+uvicorn
+pandas
+pyarrow
 
