@@ -33,4 +33,3 @@ packaging
 uvicorn
 pandas
 pyarrow
-python
