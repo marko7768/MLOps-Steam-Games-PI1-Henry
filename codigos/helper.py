@@ -3,15 +3,15 @@ import operator
 
 
 # Importar los data sets a utilizar
-df_developer = pd.read_parquet('data/contenido_free_items.parquet')
-df_reviews = pd.read_parquet('data/user_reviews_clean.parquet')
-df_user_data = pd.read_parquet('data/user_data_price.parquet')
-df_user_genre = pd.read_parquet('data/user_for_genre.parquet')
-df_best_developer_year = pd.read_parquet('data/best_developer_year.parquet')
-df_dev_analysis = pd.read_parquet('data/dev_rev_analysis.parquet')
-df_user_simil = pd.read_parquet('data/df_user_simil.parquet')
-df_item_simil = pd.read_parquet('data/df_item_simil.parquet')
-piv_table_norm = pd.read_parquet('data/piv_table_norm.parquet')
+df_developer = pd.read_parquet('datos/contenido_free_items.parquet')
+df_reviews = pd.read_parquet('datos/user_reviews_clean.parquet')
+df_user_data = pd.read_parquet('datos/user_data_price.parquet')
+df_user_genre = pd.read_parquet('datos/user_for_genre.parquet')
+df_best_developer_year = pd.read_parquet('datos/best_developer_year.parquet')
+df_dev_analysis = pd.read_parquet('datos/dev_rev_analysis.parquet')
+df_user_simil = pd.read_parquet('datos/df_user_simil.parquet')
+df_item_simil = pd.read_parquet('datos/df_item_simil.parquet')
+piv_table_norm = pd.read_parquet('datos/piv_table_norm.parquet')
 
 
 def developer_info(dev):
