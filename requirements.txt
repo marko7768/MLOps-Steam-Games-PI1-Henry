@@ -32,3 +32,5 @@ openpyxl
 packaging
 uvicorn
 pandas
+pyarrow
+python
