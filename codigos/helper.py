@@ -3,18 +3,19 @@ import operator
 
 
 # Importar los data sets a utilizar
-df_developer = pd.read_parquet('datos/contenido_free_items.parquet')
-df_reviews = pd.read_parquet('datos/user_reviews_clean.parquet')
-df_user_data = pd.read_parquet('datos/user_data_price.parquet')
-df_user_genre = pd.read_parquet('datos/user_for_genre.parquet')
-df_best_developer_year = pd.read_parquet('datos/best_developer_year.parquet')
-df_dev_analysis = pd.read_parquet('datos/dev_rev_analysis.parquet')
-df_user_simil = pd.read_parquet('datos/df_user_simil.parquet')
-df_item_simil = pd.read_parquet('datos/df_item_simil.parquet')
-piv_table_norm = pd.read_parquet('datos/piv_table_norm.parquet')
+#df_developer = pd.read_parquet('datos/contenido_free_items.parquet')
+#df_reviews = pd.read_parquet('datos/user_reviews_clean.parquet')
+#df_user_data = pd.read_parquet('datos/user_data_price.parquet')
+#df_user_genre = pd.read_parquet('datos/user_for_genre.parquet')
+#df_best_developer_year = pd.read_parquet('datos/best_developer_year.parquet')
+#df_dev_analysis = pd.read_parquet('datos/dev_rev_analysis.parquet')
+#df_user_simil = pd.read_parquet('datos/df_user_simil.parquet')
+#df_item_simil = pd.read_parquet('datos/df_item_simil.parquet')
+#piv_table_norm = pd.read_parquet('datos/piv_table_norm.parquet')
 
 
 def developer_info(dev):
+    df_developer = pd.read_parquet('datos/contenido_free_items.parquet')
     # Filtramos por el desarrollador que se ingrese en la API
     data_dev = df_developer[df_developer['developer'] == dev]
     
@@ -39,6 +40,8 @@ def developer_info(dev):
 
 
 def userdata(user_id):
+
+    df_reviews = pd.read_parquet('datos/user_reviews_clean.parquet')
 
     user = None  # Inicializar con un valor por defecto
 
@@ -77,6 +80,7 @@ def userdata(user_id):
 
 
 def UserForGenre(genre):
+    df_user_genre = pd.read_parquet('datos/user_for_genre.parquet')
     # Se filtra para este genero 
     one_genre_data = df_user_genre[df_user_genre['genres'] == genre]
     # Se calcula el usuario con más horas
@@ -102,7 +106,7 @@ def UserForGenre(genre):
 
 
 def best_developer_year(year_api): 
-
+    df_best_developer_year = pd.read_parquet('datos/best_developer_year.parquet')
     # Se filtra el DataFrame para el año dado
     year_data = df_best_developer_year[(df_best_developer_year['release_year'] == year_api) & (df_best_developer_year['sentiment_analysis'] == 2)]
     # Se obtienen los 3 principales desarrolladores con más juegos recomendados por usuarios
@@ -116,6 +120,7 @@ def best_developer_year(year_api):
     return best_dev_result
 
 def developer_reviews_analysis(dev_api):
+    df_dev_analysis = pd.read_parquet('datos/dev_rev_analysis.parquet')
     # Se filtra el DataFrame por el desarrollador dado
     developer_data = df_dev_analysis[df_dev_analysis['developer'] == dev_api]
     # Se obtiene el recuento de análisis de sentimiento por desarrollador
@@ -126,7 +131,7 @@ def developer_reviews_analysis(dev_api):
 
 
 def recomendacion_juego(game):
-    
+    df_item_simil = pd.read_parquet('datos/df_item_simil.parquet')
     similar_games = {}
     count = 1
 
@@ -137,7 +142,7 @@ def recomendacion_juego(game):
 
 
 def recomendacion_usuario(user):
-
+    df_user_simil = pd.read_parquet('datos/df_user_simil.parquet')
     # Se verifica si el usuario está presente en las columnas de piv_table_norm
     if user not in piv_table_norm.columns:
         return {'message': 'El Usuario no tiene datos disponibles {}'.format(user)}
