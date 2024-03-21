@@ -25,3 +25,7 @@ Proporciona datos de la empresa a través de FastAPI con los siguientes endpoint
 * best_developer_year(año: int): Top 3 de desarrolladores con juegos MÁS recomendados por usuarios para el año dado.
 
 * developer_reviews_analysis(desarrolladora: str): Análisis de sentimiento de reseñas por desarrolladora.
+
+# Datos de contacto
+- [Email](https://mail.google.com/mail/?view=cm&fs=1&to=markosotola@gmail.com)
+- [Linkedin](https://www.linkedin.com/in/marko-sotola-15640b212/)
