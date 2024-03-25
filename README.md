@@ -8,9 +8,9 @@
 La tarea es crear un sistema de recomendación de videojuegos para usuarios en la plataforma Steam. Donde enfrentas desafíos debido a la falta de madurez en los datos, que requiere intervención en el área de Data Engineering.
 
 ## Rol a Desarrollar
-Comenzaras tu trabajo como Data Scientist en Steam, abordando la falta de madurez en los datos y creando un sistema de recomendación eficiente desde cero. Se debe realizar transformaciones, ingeniería de características y desarrollar una API utilizando FastAPI para exponer los datos de la empresa.
+Comenzaras tu trabajo como Data Scientist en Steam, abordando la falta de madurez en los datos y creando un sistema de recomendación eficiente desde cero. Se debe realizar transformaciones, ingeniería de datos y desarrollar una API utilizando FastAPI para exponer los datos de la empresa.
 
-#Propuesta de Trabajo
+# Propuesta de Trabajo
 ## Transformaciones
 Los datos originales estan comprimidos en la carpeta datos_originales. Los datos fueron descomprimidos con las herramientas incluidas en Linux y guardados en la carpeta datos. En el notebook ETL se transforman los datos a parquet por cuestiones de comodidad.
 
